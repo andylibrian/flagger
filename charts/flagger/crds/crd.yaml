@@ -163,6 +163,9 @@ spec:
                     portName:
                       description: Container port name
                       type: string
+                    appProtocol:
+                      description: Application protocol of the port
+                      type: string
                     targetPort:
                       description: Container target port name
                       x-kubernetes-int-or-string: true
@@ -1030,6 +1033,7 @@ spec:
                     - Initialized
                     - Waiting
                     - Progressing
+                    - WaitingTrafficIncrease
                     - WaitingPromotion
                     - Promoting
                     - Finalising
